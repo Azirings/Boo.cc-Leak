@@ -80,7 +80,7 @@ end
 
 local library = {
     version = "V1",
-    title = title or "Mikey " .. tostring(math.random(1,366)),
+    title = title or "Mikey" .. tostring(math.random(1,366)),
     fps = 0,
     rank = "Beta Access"
 }
@@ -202,7 +202,7 @@ function library:Watermark(text)
         end
     end
 
-    tetx = text or "xsx v2"
+    tetx = text or "Boo.cc EA"
 
     local watermark = Instance.new("ScreenGui")
     local watermarkPadding = Instance.new("UIPadding")
@@ -326,7 +326,7 @@ function library:Watermark(text)
 
     local WatermarkFunctions = {}
     function WatermarkFunctions:AddWatermark(text)
-        tetx = text or "xsx v2"
+        tetx = text or "Boo.CC EA"
 
         local edge = Instance.new("Frame")
         local edgeCorner = Instance.new("UICorner")
@@ -692,9 +692,9 @@ function library:Introduction()
     local bar = Instance.new("Frame")
     local barCorner = Instance.new("UICorner")
     local barLayout = Instance.new("UIListLayout")
-    local xsxLogo = Instance.new("ImageLabel")
+    local booLogo = Instance.new("ImageLabel")
     local hashLogo = Instance.new("ImageLabel")
-    local xsx = Instance.new("TextLabel")
+    local Boo = Instance.new("TextLabel")
     local text = Instance.new("TextLabel")
     local pageLayout = Instance.new("UIListLayout")
     
@@ -750,17 +750,17 @@ function library:Introduction()
     barLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
     barLayout.SortOrder = Enum.SortOrder.LayoutOrder
     
-    xsxLogo.Name = "xsxLogo"
-    xsxLogo.Parent = background
-    xsxLogo.AnchorPoint = Vector2.new(0.5, 0.5)
-    xsxLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    xsxLogo.BackgroundTransparency = 1.000
-    xsxLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
-    xsxLogo.Size = UDim2.new(0, 448, 0, 150)
-    xsxLogo.Visible = true
-    xsxLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
-    xsxLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
-    xsxLogo.ImageTransparency = 1
+    booLogo.Name = "booLogo"
+    BooLogo.Parent = background
+    BooLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+    BooLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    BooLogo.BackgroundTransparency = 1.000
+    BooLogo.Position = UDim2.new(0.5, 0, 0.5, 0)
+    BOOLogo.Size = UDim2.new(0, 448, 0, 150)
+    BooLogo.Visible = true
+    BooLogo.Image = "http://www.roblox.com/asset/?id=9365068051"
+    BooLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
+    BooLogo.ImageTransparency = 1
     
     hashLogo.Name = "hashLogo"
     hashLogo.Parent = background
@@ -774,13 +774,13 @@ function library:Introduction()
     hashLogo.ImageColor3 = Color3.fromRGB(159, 115, 255)
     hashLogo.ImageTransparency = 1
     
-    xsx.Name = "xsx"
+    xsx.Name = "Boo EA"
     xsx.Parent = background
     xsx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     xsx.BackgroundTransparency = 1.000
     xsx.Size = UDim2.new(0, 80, 0, 21)
     xsx.Font = Enum.Font.Code
-    xsx.Text = "powered by xsx"
+    xsx.Text = "powered by V0o"
     xsx.TextColor3 = Color3.fromRGB(124, 124, 124)
     xsx.TextSize = 10.000
     xsx.TextTransparency = 1
@@ -804,12 +804,12 @@ function library:Introduction()
     pageLayout.SortOrder = Enum.SortOrder.LayoutOrder
     pageLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 
-    CreateTween("xsxRotation", 0)
+    CreateTween("BooRotation", 0)
     local MinusAmount = -16
     coroutine.wrap(function()
         while wait() do
             MinusAmount = MinusAmount + 0.4
-            TweenService:Create(xsxLogo, TweenTable["xsxRotation"], {Rotation = xsxLogo.Rotation - MinusAmount}):Play()
+            TweenService:Create(BooLogo, TweenTable["BooRotation"], {Rotation = BooLogo.Rotation - MinusAmount}):Play()
         end
     end)()
 
@@ -1233,7 +1233,7 @@ function library:Init(key)
             buttonBackground.Position = UDim2.new(0.5, 0, 0.5, 0)
             buttonBackground.Size = UDim2.new(0, 394, 0, 22)
 
-            buttonGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 34, 34)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(28, 28, 28))}
+            buttonGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(34, 37, 39)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 52, 59))}
             buttonGradient.Rotation = 90
             buttonGradient.Name = "buttonGradient"
             buttonGradient.Parent = buttonBackground
@@ -1245,7 +1245,7 @@ function library:Init(key)
             buttonLabel.Name = "buttonLabel"
             buttonLabel.Parent = buttonBackground
             buttonLabel.AnchorPoint = Vector2.new(0.5, 0.5)
-            buttonLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            buttonLabel.BackgroundColor3 = Color3.fromRGB(254, 255, 255)
             buttonLabel.BackgroundTransparency = 1.000
             buttonLabel.ClipsDescendants = true
             buttonLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -1257,17 +1257,17 @@ function library:Init(key)
             buttonLabel.RichText = true
 
             button.MouseEnter:Connect(function()
-                TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+                TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(30, 40, 50)}):Play()
             end)
             button.MouseLeave:Connect(function()
-                TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(50, 50, 50)}):Play()
+                TweenService:Create(button, TweenTable["hover"], {BackgroundColor3 = Color3.fromRGB(60, 70, 80)}):Play()
             end)
 
             button.MouseButton1Down:Connect(function()
                 TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(159, 115, 255)}):Play()
             end)
             button.MouseButton1Up:Connect(function()
-                TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(190, 190, 190)}):Play()
+                TweenService:Create(buttonLabel, TweenTable["hover"], {TextColor3 = Color3.fromRGB(191, 115, 190)}):Play()
             end)
 
             button.MouseButton1Click:Connect(function()
